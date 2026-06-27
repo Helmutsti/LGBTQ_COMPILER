@@ -1,0 +1,20 @@
+fluid nonbinary a feels 10
+
+be print a
+
+fluid nonbinary b feels 15
+
+be print "credo che questo non ti piacera"
+be print a+b
+
+fluid group lista_bella
+lista_bella inclusive "ciao"
+lista_bella inclusive 111
+
+
+be print lista_bella
+
+cycle(item,i in lista_bella)❤️
+    be print i
+    be print item
+💔
