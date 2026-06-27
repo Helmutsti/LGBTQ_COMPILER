@@ -116,6 +116,37 @@ le dichiarazioni `nonlocal`/`global` dove servono.
 
 Output dell'interprete e del Python tradotto **coincidono** sull'esempio.
 
+## Syntax highlighting in VSCode
+
+La cartella `vscode-extension/` contiene un'estensione per VSCode che aggiunge
+il syntax highlighting per i file `.lgbtq`.
+
+**Installazione (una tantum):**
+
+```bash
+# Opzione A — installa direttamente il pacchetto pre-compilato
+code --install-extension vscode-extension/inclusivescript-syntax.vsix
+
+# Oppure in VSCode: Cmd+Shift+P → "Extensions: Install from VSIX..."
+#   e seleziona il file vscode-extension/inclusivescript-syntax.vsix
+```
+
+Dopo l'installazione fai `Developer: Reload Window` (Cmd+Shift+P) e apri
+qualsiasi file `.lgbtq`: nella status bar in basso a destra comparirà
+**InclusiveScript** e il codice sarà colorato.
+
+**Cosa viene evidenziato:**
+
+| Categoria | Parole chiave |
+|-----------|---------------|
+| Control flow | `fluid` `be` `if` `else` `while` `cycle` `in` `return` `fun` `❤️` `💔` |
+| Tipi | `binary` `nonbinary` `group` |
+| Operatori | `feels` `inclusive` `exclusive` `likes` `unlikes` `under` `over` `not` `and` `or` |
+| Costanti | `king` `queen` `bi` `nil` |
+| Altro | stringhe, numeri, commenti `//`, chiamate a funzione |
+
+---
+
 ## Idee per i prossimi passi
 - Compilatore: opzione `--run` per tradurre ed eseguire al volo; emissione di `break`/`continue`
 - `cycle` con un solo nome quando l'indice non serve

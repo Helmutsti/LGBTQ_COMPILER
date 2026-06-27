@@ -1,0 +1,26 @@
+{
+  "name": "inclusivescript-syntax",
+  "displayName": "InclusiveScript Syntax",
+  "description": "Syntax highlighting for InclusiveScript (.lgbtq)",
+  "version": "0.1.0",
+  "publisher": "manuelcucca",
+  "engines": { "vscode": "^1.70.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "inclusivescript",
+        "aliases": ["InclusiveScript", "lgbtq"],
+        "extensions": [".lgbtq"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "inclusivescript",
+        "scopeName": "source.lgbtq",
+        "path": "./syntaxes/inclusivescript.tmLanguage.json"
+      }
+    ]
+  }
+}

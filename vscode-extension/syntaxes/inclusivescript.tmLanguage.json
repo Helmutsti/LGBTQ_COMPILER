@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "InclusiveScript",
+  "scopeName": "source.lgbtq",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#heart-blocks" },
+    { "include": "#keywords-control" },
+    { "include": "#keywords-type" },
+    { "include": "#keywords-operator" },
+    { "include": "#constants" },
+    { "include": "#function-def" },
+    { "include": "#be-call" },
+    { "include": "#operators" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "name": "comment.line.double-slash.lgbtq",
+      "match": "//.*$"
+    },
+    "strings": {
+      "name": "string.quoted.double.lgbtq",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.lgbtq",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.lgbtq",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "heart-blocks": {
+      "patterns": [
+        {
+          "name": "punctuation.section.block.begin.lgbtq keyword.control.lgbtq",
+          "match": "❤️"
+        },
+        {
+          "name": "punctuation.section.block.end.lgbtq keyword.control.lgbtq",
+          "match": "💔"
+        }
+      ]
+    },
+    "keywords-control": {
+      "name": "keyword.control.lgbtq",
+      "match": "\\b(fluid|be|if|else|while|cycle|in|return|fun)\\b"
+    },
+    "keywords-type": {
+      "name": "storage.type.lgbtq",
+      "match": "\\b(binary|nonbinary|group)\\b"
+    },
+    "keywords-operator": {
+      "name": "keyword.operator.word.lgbtq",
+      "match": "\\b(feels|inclusive|exclusive|likes|unlikes|underlikes|overlikes|under|over|not|and|or)\\b"
+    },
+    "constants": {
+      "name": "constant.language.lgbtq",
+      "match": "\\b(king|queen|bi|nil)\\b"
+    },
+    "function-def": {
+      "patterns": [
+        {
+          "match": "\\b(fun)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": { "name": "keyword.control.lgbtq" },
+            "2": { "name": "entity.name.function.lgbtq" }
+          }
+        },
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()",
+          "captures": {
+            "1": { "name": "entity.name.function.call.lgbtq" }
+          }
+        }
+      ]
+    },
+    "be-call": {
+      "match": "\\b(be)\\s+([a-zA-Z_][a-zA-Z0-9_]*)",
+      "captures": {
+        "1": { "name": "keyword.control.lgbtq" },
+        "2": { "name": "entity.name.function.call.lgbtq" }
+      }
+    },
+    "operators": {
+      "name": "keyword.operator.lgbtq",
+      "match": "[+\\-*/%=!<>&|]+"
+    },
+    "punctuation": {
+      "patterns": [
+        { "name": "punctuation.separator.lgbtq", "match": "," },
+        { "name": "punctuation.terminator.lgbtq", "match": ";" },
+        { "name": "punctuation.section.brackets.lgbtq", "match": "[\\[\\]]" },
+        { "name": "punctuation.section.parens.lgbtq", "match": "[()]" },
+        { "name": "punctuation.section.braces.lgbtq", "match": "[{}]" }
+      ]
+    }
+  }
+}
